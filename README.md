@@ -1,6 +1,16 @@
 # Go-Certdist OPNsense Plugin
 
-This plugin is in alpha state (aka "works for me"). It's purpose is to update the certificates on OPNsense from a remote go-certdist installation by downloading the certificate with the given age key.
+This plugin is in alpha state (aka "works for me"). It's purpose is to update the certificates on OPNsense from a remote
+go-certdist installation by downloading the certificate with the given age key.
+
+## Links
+
+| Repository                                                                   | Description               |
+|------------------------------------------------------------------------------|---------------------------|
+| [go-certdist](https://github.com/markus-seidl/go-certdist)                   | Root project              |
+| [go-certdist-opnsense](https://github.com/markus-seidl/go-certdist-opnsense) | OPNSense Plugin           |
+| [go-certdist-helm](https://github.com/markus-seidl/go-certdist-helm)         | Helm Chart                |
+| [go-certdist-ansible](https://github.com/markus-seidl/go-certdist-ansible)   | Ansible Installation Role |
 
 ## Installation
 
@@ -16,7 +26,7 @@ Go to the UI and under `Services -> CertDist -> Settings` you can find the plugi
 
 ## Configuration
 
-Use something like 
+Use something like
 
 ```yaml
 connection:
@@ -31,13 +41,14 @@ certificate:
 
 Note that the output directory must be `/tmp/certdist`.
 
-Create a cron job to run the certificate update every night via the OPNsense cron UI via 
-`System -> Settings -> Cron` and use the command `Run the GoCertdist update script`. 
+Create a cron job to run the certificate update every night via the OPNsense cron UI via
+`System -> Settings -> Cron` and use the command `Run the GoCertdist update script`.
 
 After the first successful certdist run, you'll find `System -> Trust -> Certificates` a `GoCertdist-Auto` certificate.
 The web server should switch to this certificate automagically.
 
 ## Troubleshooting
 
-You can execute the update procedure manually via `configctl gocertdist update` the script will create the `/var/log/certdist.log`.
+You can execute the update procedure manually via `configctl gocertdist update` the script will create the
+`/var/log/certdist.log`.
 
