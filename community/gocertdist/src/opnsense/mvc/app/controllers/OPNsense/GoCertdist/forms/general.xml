@@ -1,0 +1,14 @@
+<form>
+    <field>
+        <id>gocertdist.general.enabled</id>
+        <label>Enable</label>
+        <type>checkbox</type>
+        <help>Enable the GoCertdist service</help>
+    </field>
+    <field>
+        <id>gocertdist.general.configuration</id>
+        <label>Configuration</label>
+        <type>textbox</type>
+        <help>YAML configuration for the GoCertdist service</help>
+    </field>
+</form>

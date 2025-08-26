@@ -1,0 +1,3 @@
+Name: go-certdist-opnsense
+Version: 1.0
+Comment: Update the certificates on OPNsense from a remote go-certdist installation

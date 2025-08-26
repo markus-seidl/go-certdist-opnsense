@@ -1,0 +1,9 @@
+<menu>
+    <!-- Plugin GoCertdist menu -->
+    <Services>
+        <Certdist VisibleName="CertDist">
+            <Settings VisibleName="Settings" url="/ui/gocertdist/index"/>
+            <!-- LogFile VisibleName="Log File" url="/ui/gocertdist/logfile/index"/-->
+        </Certdist>
+    </Services>
+</menu>
